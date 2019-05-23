@@ -60,7 +60,7 @@ public class Tests {
                     row.createCell(1).setCellValue(driver.getCurrentUrl());             //заполнение хлс листа информацией
                     row.createCell(2).setCellValue(StringUtils.countMatches(driver.getPageSource().toLowerCase(), "tea"));
                     driver.navigate().back();
-                    listOfLinks = driver.findElements(By.xpath("//div[@class='r']//h3[@class='LC20lb']"));
+                    listOfLinks = driver.findElements(By.xpath("//div[@class='r']//h3[@class='LC20lb']")); // обновление листа эл-ов после возврата со страницы
                 }
 
                 for (int q = 0; q < columns.length; q++) {
